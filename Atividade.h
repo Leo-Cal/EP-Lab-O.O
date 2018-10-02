@@ -1,20 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/* 
- * File:   Atividade.h
- * Author: leocal
- *
- * Created on 2 de Setembro de 2018, 20:27
- */
 #include <string>
+#include <iostream>
 #include "Pessoa.h"
 #ifndef ATIVIDADE_H
 #define ATIVIDADE_H
-#define MAXIMO_RECURSOS 10
+#define MAXIMO_RECURSOS 1
 
 class Atividade {
 

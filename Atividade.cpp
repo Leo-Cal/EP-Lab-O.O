@@ -1,22 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   Atividade.cpp
- * Author: leocal
- * 
- * Created on 2 de Setembro de 2018, 20:27
- */
 
 #include "Atividade.h"
 #include "Pessoa.h"
 #include <iostream>
 #include <string>
 #include <math.h>
-#define MAXIMO_RECURSOS 10
+
 
 using namespace std;
 
@@ -44,7 +32,7 @@ bool Atividade :: adicionar(Pessoa* recurso){
         return false;
     }
     for (i = 0 ; i<num_trabalhadores; i++) {
-        if (participantes[i] == recurso) {
+        if (participantes[i]->getValorPorHora() == recurso->getValorPorHora()  && participantes[i]->getNome() == recurso->getNome() ) {
             return false;
         }
     }
@@ -66,14 +54,15 @@ int Atividade :: getQuantidadeDePessoas(){
 int Atividade :: getDuracao(){
     int i;
     int duracao;
-    int somatorio_horas;
+    double somatorio_horas;
     if (num_trabalhadores == 0 ) {
         return -1;
     }
     for (i=0; i<num_trabalhadores; i++) {
-        somatorio_horas =+ participantes[i] -> getHorasDiarias();
+        somatorio_horas = somatorio_horas + (participantes[i] -> getHorasDiarias());
     }
-    duracao = ceil(horasNecessarias/somatorio_horas);
+
+    duracao = ceil( horasNecessarias/  somatorio_horas);
     
     return duracao;
 }
@@ -88,8 +77,8 @@ double Atividade ::  getCusto(){
         return -1;
     }
     
-    for(i=0; i< num_trabalhadores; i++) {
-        custo =+ participantes[i]->getHorasDiarias() * participantes[i]->getValorPorHora() * this->getDuracao();
+    for(i=0; i < num_trabalhadores; i++) {
+        custo = custo + (double) participantes[i]->getHorasDiarias() * (double) participantes[i]->getValorPorHora() * this->getDuracao();
     }
     
     return custo;
