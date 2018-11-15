@@ -36,8 +36,10 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/Atividade.o \
+	${OBJECTDIR}/Ferramenta.o \
 	${OBJECTDIR}/Pessoa.o \
 	${OBJECTDIR}/Projeto.o \
+	${OBJECTDIR}/Recurso.o \
 	${OBJECTDIR}/main.o
 
 
@@ -70,6 +72,11 @@ ${OBJECTDIR}/Atividade.o: Atividade.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Atividade.o Atividade.cpp
 
+${OBJECTDIR}/Ferramenta.o: Ferramenta.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Ferramenta.o Ferramenta.cpp
+
 ${OBJECTDIR}/Pessoa.o: Pessoa.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -79,6 +86,11 @@ ${OBJECTDIR}/Projeto.o: Projeto.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Projeto.o Projeto.cpp
+
+${OBJECTDIR}/Recurso.o: Recurso.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Recurso.o Recurso.cpp
 
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}

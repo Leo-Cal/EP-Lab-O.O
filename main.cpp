@@ -1,8 +1,11 @@
 #include <iostream>
 #include <string>
+#include "Recurso.h"
 #include "Pessoa.h"
 #include "Atividade.h"
 #include "Projeto.h"
+#include "Ferramenta.h"
+
 
 using namespace std;
 
@@ -20,6 +23,10 @@ int main() {
     int horas_atividade;
     int i;
     int choice_pessoa;
+
+    // TESTES 
+
+ 
     
     
  // Inicializacao do projeto:   

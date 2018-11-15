@@ -5,8 +5,10 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>Atividade.h</itemPath>
+      <itemPath>Ferramenta.h</itemPath>
       <itemPath>Pessoa.h</itemPath>
       <itemPath>Projeto.h</itemPath>
+      <itemPath>Recurso.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -16,8 +18,10 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>Atividade.cpp</itemPath>
+      <itemPath>Ferramenta.cpp</itemPath>
       <itemPath>Pessoa.cpp</itemPath>
       <itemPath>Projeto.cpp</itemPath>
+      <itemPath>Recurso.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -49,6 +53,10 @@
       </item>
       <item path="Atividade.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Ferramenta.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Ferramenta.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Pessoa.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Pessoa.h" ex="false" tool="3" flavor2="0">
@@ -56,6 +64,10 @@
       <item path="Projeto.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Projeto.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Recurso.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Recurso.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -85,6 +97,10 @@
       </item>
       <item path="Atividade.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Ferramenta.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Ferramenta.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Pessoa.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Pessoa.h" ex="false" tool="3" flavor2="0">
@@ -92,6 +108,10 @@
       <item path="Projeto.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Projeto.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Recurso.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Recurso.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>

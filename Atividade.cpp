@@ -4,11 +4,12 @@
 #include <iostream>
 #include <string>
 #include <math.h>
+#include <stdexcept>
 
 
 using namespace std;
 
-Atividade :: Atividade(string nome, int horasNecessarias ) : nome(nome) , horasNecessarias(horasNecessarias) {
+Atividade :: Atividade(string nome) : nome(nome) {
     
 }
 
@@ -24,42 +25,43 @@ int Atividade :: getHorasNecessarias(){
     return this -> horasNecessarias;
 }
 
-bool Atividade :: adicionar(Pessoa* recurso){
+void Atividade :: adicionar(Recurso* recurso){
     
     int i= 0 ;
     
-    if (num_trabalhadores == MAXIMO_RECURSOS) {
-        return false;
+    if (num_recursos == Atividade::MAX_RECURSOS) {
+        throw new overflow_error("Maximo recursos atingido");
     }
-    for (i = 0 ; i<num_trabalhadores; i++) {
-        if (participantes[i]->getValorPorHora() == recurso->getValorPorHora()  && participantes[i]->getNome() == recurso->getNome() ) {
-            return false;
+    for (i = 0 ; i<num_recursos; i++) {
+        if (participantes[i]->getCusto(1) == recurso->getCusto(1)  && participantes[i]->getNome() == recurso->getNome() ) {
+            throw new invalid_argument("Recurso ja adicionado");
         }
     }
     
-    participantes[num_trabalhadores]  = recurso;
-    num_trabalhadores ++;
-    return true;
+    participantes[num_recursos]  = recurso;
+    num_recursos ++;
+    
 }
 
-Pessoa** Atividade ::  getPessoas(){
+Recurso** Atividade ::  getRecursos(){
     return participantes;
     
 }
 
-int Atividade :: getQuantidadeDePessoas(){
-    return num_trabalhadores;
+int Atividade :: getQuantidadeDeRecursos(){
+    return num_recursos;
 }
 
+/*
 int Atividade :: getDuracao(){
     int i;
     int duracao;
     double somatorio_horas = 0;
-    if (num_trabalhadores == 0 ) {
+    if (num_recursos == 0 ) {
         return -1;
     }
-    for (i=0; i<num_trabalhadores; i++) {
-        somatorio_horas = somatorio_horas + (participantes[i] -> getHorasDiarias());
+    for (i=0; i<num_recursos; i++) {
+        somatorio_horas = somatorio_horas + (participantes[i] -> );
     }
 
     duracao = ceil( horasNecessarias/  somatorio_horas);
@@ -85,11 +87,13 @@ double Atividade ::  getCusto(){
     
 }
 
+
+
 void  Atividade :: imprimir(){
     
     cout << nome << " - " << this->getDuracao() << " dias - R$" << this->getCusto() << endl;
 
     
 }
-
+*/
 

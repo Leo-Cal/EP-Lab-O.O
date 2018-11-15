@@ -1,39 +1,41 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   Pessoa.h
- * Author: leocal
- *
- * Created on 2 de Setembro de 2018, 20:28
- */
-#include <string>
 #ifndef PESSOA_H
 #define PESSOA_H
 
-class Pessoa {
+#include <string>
+
+#include "Recurso.h"
+
+
+
+class Pessoa : public Recurso {
+
 public:
-Pessoa( std :: string nome, double valorPorHora, int horasDiarias);
-~Pessoa();
+    
+    Pessoa( std :: string nome, double valorPorHora, int horasDiarias);
+    Pessoa(std::string nome,int horasDiarias);
+    ~Pessoa();
 
-std :: string getNome();
+    
 
-double getValorPorHora();
+    virtual double getValorPorHora();
 
-int getHorasDiarias();
+    virtual int getHorasDiarias();
 
-double getCusto(int dias);
+    virtual bool recebeValorPadrao();
+    
+    double getCusto(int dias);
 
-void imprimir();
+    void imprimir();
 
+    static void setValorPorHoraPadrao(double valor);
+    static double getValorPorHoraPadrao();
+    
 private:
     std :: string nome;
     double valorPorHora;
     int horasDiarias;
-    
+    static double valorPorHoraPadrao;
+    bool usaValorPadrao = false;
 
 };
 
