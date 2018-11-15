@@ -4,7 +4,7 @@
 #include "Pessoa.h"
 #ifndef ATIVIDADE_H
 #define ATIVIDADE_H
-#define MAXIMO_RECURSOS 1
+#define MAXIMO_RECURSOS 10
 
 class Atividade {
 

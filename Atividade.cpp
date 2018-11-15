@@ -54,7 +54,7 @@ int Atividade :: getQuantidadeDePessoas(){
 int Atividade :: getDuracao(){
     int i;
     int duracao;
-    double somatorio_horas;
+    double somatorio_horas = 0;
     if (num_trabalhadores == 0 ) {
         return -1;
     }
@@ -70,8 +70,8 @@ int Atividade :: getDuracao(){
 double Atividade ::  getCusto(){
     
     int i;
-    double custo;
-    double somatorio_custo_diario;
+    double custo=0;
+   
     
     if(num_trabalhadores == 0 ) {
         return -1;

@@ -9,57 +9,6 @@ using namespace std;
 
 int main() {
 
- //test Pessoa
-    Pessoa *maria = new Pessoa("Maria",2,2);
-    
-    cout << endl ;
-//-------------------------------
-
-    Pessoa *joao = new Pessoa("Joao",3,3);
-   
-    cout << endl ;
-    
-
-//test Atividade
-
-   
-    Atividade *brita =  new Atividade("Brita", 10);
-    
-    brita->adicionar(maria);
-    
-    brita -> adicionar(joao);
-   
-    
-    brita->imprimir();
-    
-    
-    cout << endl;
- //test Projeto
-    
-    Atividade *a = new Atividade("Test",50);
-    
-    a-> adicionar(maria);
-    
-    a->imprimir();
-    
-    Projeto *p = new Projeto("EP");
-        
-    p->adicionarRecurso(maria);
-    p->adicionarRecurso(joao);
-    
-    p->adicionar(brita);
-    p->adicionar(a);
-    
-    
-  
-    
-    
-    p->imprimir();
-    
-  //FIM DOS TESTES 
-  
-    
-    cout << endl << "----END OF TESTING------" << endl;
   
     string nome_projeto;
     string nome_pessoa;
@@ -105,7 +54,7 @@ int main() {
         else{
             cout << "Nao eh possivel adicionar uma nova pessoa" << endl;
         }
-        goto tela_inicial;  //VAI DAR BOM??
+        goto tela_inicial;  
     
     }
   //Adicionar Atividade

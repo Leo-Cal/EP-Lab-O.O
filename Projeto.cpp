@@ -21,7 +21,7 @@ std::string Projeto ::  getNome(){
 }
 
 bool Projeto ::  adicionar(Atividade* a){
-    int i= 0 ;
+   
     
     if (num_atividades == MAXIMO_ATIVIDADES) {
         return false;
